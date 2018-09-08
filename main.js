@@ -1,8 +1,8 @@
 const spanish = {
-    "merry": "feliz", 
+    "merry": "alegre", 
     "christmas": "navidad", 
     "and": "y", 
-    "happy": "feliz", 
+    "happy": "contento", 
     "new": "nuevo", 
     "year": "año"
 }
@@ -31,73 +31,71 @@ const printToDom = (stringToPrint, divId) => {
 
 };
 
-const spanishTranslation = document.getElementById("spanish");
-spanishTranslation.onclick = function translatorSpanish () {
-    const inputBox = document.getElementById("inputBox").value
-    if ("merry" === inputBox) {
-        printToDom(spanish.merry, 'returnText')
-    }
-    if ("christmas" === inputBox) {
-        printToDom(spanish.christmas, 'returnText')
-    }
-    if ("and" === inputBox) {
-        printToDom(spanish.and, 'returnText')
-    }
-    if ("happy" === inputBox) {
-        printToDom(spanish.happy, 'returnText')
-    }
-    if ("new" === inputBox) {
-        printToDom(spanish.new, 'returnText')
-    }
-    if ("year" === inputBox) {
-        printToDom(spanish.year, 'returnText')
-    }
+
+const spanishTranslate = () => {
+    const inputValue = document.getElementById('inputBox').value
+    const inputWords = inputValue.split(" ");
+    const spanishTranslatedString = spanishStringBuilder (inputWords);
+    printToDom(spanishTranslatedString, 'returnText');
 }
 
-const frenchTranslation = document.getElementById("french");
-frenchTranslation.onclick = function translatorFrench () {
-    const inputBox = document.getElementById("inputBox").value
-    if ("merry" === inputBox) {
-        printToDom(french.merry, 'returnText')
-    }
-    if ("christmas" === inputBox) {
-        printToDom(french.christmas, 'returnText')
-    }
-    if ("and" === inputBox) {
-        printToDom(french.and, 'returnText')
-    }
-    if ("happy" === inputBox) {
-        printToDom(french.happy, 'returnText')
-    }
-    if ("new" === inputBox) {
-        printToDom(french.new, 'returnText')
-    }
-    if ("year" === inputBox) {
-        printToDom(french.year, 'returnText')
-    }
-}
+const spanishStringBuilder = (inputWords) => {
+    let newString = '';
+    for(let i=0; i<inputWords.length;i++) {
+        let spanishWord = spanish[inputWords[i]];
+        newString += `<p>${spanishWord}</p>`
 
-const germanTranslation = document.getElementById("german");
-germanTranslation.onclick = function translatorGerman () {
-    const inputBox = document.getElementById("inputBox").value
-    if ("merry" === inputBox) {
-        printToDom(german.merry, 'returnText')
-    }
-    if ("christmas" === inputBox) {
-        printToDom(german.christmas, 'returnText')
-    }
-    if ("and" === inputBox) {
-        printToDom(german.and, 'returnText')
-    }
-    if ("happy" === inputBox) {
-        printToDom(german.happy, 'returnText')
-    }
-    if ("new" === inputBox) {
-        printToDom(german.new, 'returnText')
-    }
-    if ("year" === inputBox) {
-        printToDom(german.year, 'returnText')
-    }
+    };
+    return newString
 }
+const spanishButton = document.getElementById('spanishButton');
+    spanishButton.addEventListener("click", spanishTranslate);
+
+
+const frenchTranslate = () => {
+    const inputValue = document.getElementById('inputBox').value
+    const inputWords = inputValue.split(" ");
+    const frenchTranslatedString = frenchStringBuilder(inputWords);
+    printToDom(frenchTranslatedString, 'returnText');
+    }
+    
+const frenchStringBuilder = (inputWords) => {
+    let newString = '';
+    for(let i=0; i<inputWords.length;i++) {
+        let frenchWord = french[inputWords[i]];
+        newString += `<p>${frenchWord}</p>`
+    
+        };
+        return newString
+    };
+const frenchButton = document.getElementById('frenchButton');
+    frenchButton.addEventListener("click", frenchTranslate);
+
+
+const germanTranslate = () => {
+    const inputValue = document.getElementById('inputBox').value
+    const inputWords = inputValue.split(" ");
+    const germanTranslatedString = germanStringBuilder(inputWords);
+    printToDom(germanTranslatedString, 'returnText');
+    }
+        
+const germanStringBuilder = (inputWords) => {
+    let newString = '';
+    for(let i=0; i<inputWords.length;i++) {
+        let germanWord = german[inputWords[i]];
+        newString += `<p>${germanWord}</p>`
+        
+        };
+        return newString
+    };
+const germanButton = document.getElementById('germanButton');
+    germanButton.addEventListener("click", germanTranslate);
+
+    
+
+
+
+
+
 
 
