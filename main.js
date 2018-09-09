@@ -91,11 +91,5 @@ const germanStringBuilder = (inputWords) => {
 const germanButton = document.getElementById('germanButton');
     germanButton.addEventListener("click", germanTranslate);
 
-    
-
-
-
-
-
 
 
