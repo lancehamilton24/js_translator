@@ -92,3 +92,4 @@ const germanButton = document.getElementById('germanButton');
     germanButton.addEventListener("click", germanTranslate);
 
 
+
