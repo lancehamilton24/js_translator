@@ -15,7 +15,7 @@ A user friendly chat application that incorporates the following features:
 ### Screenshots
 
 Homescreen
-![screenshot](./screenshots/fduptranslation.jpg)
+![screenshot](./screenshots/translation.png)
 Emoji
 
 ### How to run this project
