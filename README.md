@@ -16,7 +16,6 @@ A user friendly chat application that incorporates the following features:
 
 Homescreen
 ![screenshot](./screenshots/translation.png)
-Emoji
 
 ### How to run this project
 
