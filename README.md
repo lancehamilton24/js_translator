@@ -15,7 +15,7 @@ A user friendly chat application that incorporates the following features:
 ### Screenshots
 
 Homescreen
-![screenshot](./screenshots/translation.png)
+![screenshot](./screenshots/translation.PNG)
 
 ### How to run this project
 
